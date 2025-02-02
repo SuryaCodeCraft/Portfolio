@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surya's Portfolio</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover, .active {
+            background: #4A90E2;
+            border-radius: 5px;
+        }
+        .projects-section {
+            padding: 50px;
+            text-align: center;
+        }
+        .projects-table {
+            width: 90%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .projects-table th, .projects-table td {
+            border: 1px solid white;
+            padding: 20px; /* Increased padding for larger cells */
+            text-align: left;
+        }
+        .projects-table th {
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .read-more {
+            color: #FFD700;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .read-more:hover {
+            color: #FFA500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" >HOME</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="Projects.html" class="active">PROJECTS</a></li>
+                <li><a href="certificates.html">CERTIFICATES</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="projects" class="projects-section">
+        <h1>Projects</h1>
+        <table class="projects-table">
+            <tr>
+                <th>SL</th>
+                <th>Project Name</th>
+                <th>Description</th>
+                <th>Links</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>From Image Text Extraction</td>
+                <td>A project that extracts text from images using OCR techniques.</td>
+                <td><a href="https://github.com/SuryaCodeCraft/Text-Extraction-from-Image/tree/main" class="read-more" target="_blank">Read More</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Krushiseva - An Agribot</td>
+                <td>An agricultural bot designed to assist farmers in precision farming.</td>
+                <td><a href="https://github.com/SuryaCodeCraft/KrushiSeva-Agribot-/blob/main/README.md" class="read-more" target="_blank">Read More</a></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Airline Management Database</td>
+                <td>A database management system for airline ticket reservations and flight details.</td>
+                <td><a href="#" class="read-more">Read More</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Inventory Components Management Database</td>
+                <td>A database system to manage and track inventory components efficiently.</td>
+                <td><a href=https://github.com/SuryaCodeCraft/Resource-Vault/blob/main/README.md class="read-more" target="_blank">Read More</a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Data Visualization with Power BI</td>
+                <td>Interactive dashboards and reports using Power BI for data insights.</td>
+                <td><a href="https://github.com/SuryaCodeCraft/Data-Visualization" class="read-more" target="_blank">Read More</a></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Data Visualization with Tableau</td>
+                <td>Visualizing and analyzing data trends using Tableau dashboards.</td>
+                <td><a href="https://github.com/SuryaCodeCraft/Data-Visualization" class="read-more" target="_blank">Read More</a></td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>
