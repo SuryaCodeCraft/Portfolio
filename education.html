@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Surya's Portfolio</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover, .active {
+            background: #4A90E2;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid white;
+            text-align: center;
+        }
+        th {
+            background: #4A90E2;
+            text-align: center;
+        }
+        .chart-container {
+            width:60px;
+            height: 60px;
+            margin: auto;
+        }
+        canvas {
+            width: 60px !important;
+            height: 60px !important;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="education.html" class="active">EDUCATION</a></li>
+                <li><a href="Projects.html">PROJECTS</a></li>
+                <li><a href="certificates.html">CERTIFICATES</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Education</h1>
+
+        <table>
+            <tr>
+                <th>Sl. No</th>
+                <th>Education</th>
+                <th>Course</th>
+                <th>Institution</th>
+                <th>Percentage/CGPA</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>SSLC (10th)</td>
+                <td>Primary Education&SSLC</td>
+                <td>Vivekananda Vidya Mandira(VVM), Hunasikote </td>
+                <td>
+                    94.72%
+                    <div class="chart-container">
+                        <canvas id="sslcChart"></canvas>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>PUC (12th)</td>
+                <td>PCMCs</td>
+                <td>Smt. Dannamma Channabasavaih College (SDC), Kolar</td>
+                <td>
+                    92%
+                    <div class="chart-container">
+                        <canvas id="pucChart"></canvas>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Bachelor of Engineering(B.E)(currently 6th sem) </td>
+                <td>Information Science and Engineering (ISE)</td>
+                <td>Dayananda Sagar Academy of Technology & Management(DSATM),Bengaluru</td>
+                <td>
+                    8.7 CGPA
+                    <div class="chart-container">
+                        <canvas id="enggChart"></canvas>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function createChart(chartId, value, color) {
+                var ctx = document.getElementById(chartId).getContext("2d");
+                new Chart(ctx, {
+                    type: "pie",
+                    data: {
+                        labels: ["Achieved", "Remaining"],
+                        datasets: [{
+                            data: [value, 100 - value],
+                            backgroundColor: [color, "#dddddd"]
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            }
+
+            createChart("sslcChart", 94.72, "#1D428A");
+            createChart("pucChart", 92, "#1D428A");
+            createChart("enggChart", 87, "#1D428A"); // Converted 8.7 CGPA to 87%
+        });
+    </script>
+</body>
+</html>
