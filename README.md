@@ -3,7 +3,7 @@
 Welcome to my personal portfolio! 🚀 This website showcases my skills, projects, certificates, and contact information in a visually appealing and interactive way.
 
 ## 🌐 Live Demo
-[(https://suryacodecraft.github.io/Portfolio/) (Update with your live link if hosted)
+[(https://suryacodecraft.github.io/Portfolio/) 
 
 ## 📌 Features
 - **Smooth Navigation**: Easily switch between sections like Home, Education, Projects, Skills, and Contact.
