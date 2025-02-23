@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Surya's Portfolio</title>
+
+    <style>
+        body {
+            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover, .active {
+            background: #4A90E2;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        .contact-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .contact-table td {
+            padding: 15px;
+            border-bottom: 1px solid white;
+            text-align: center;
+        }
+        .contact-table a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.3s;
+        }
+        .contact-table a:hover {
+            color: #4A90E2;
+        }
+        .contact-table img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s, filter 0.3s;
+        }
+        .contact-table img:hover {
+            transform: scale(1.2);
+            filter: brightness(1.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="Projects.html">PROJECTS</a></li>
+                <li><a href="certificates.html">CERTIFICATES</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="contact.html" class="active">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Contact</h1>
+
+        <table class="contact-table">
+            <tr>
+                <td>
+                    <a href="tel:9019944884">
+                        <img src="whatsapp.png" alt="Phone">
+                    </a>
+                </td>
+                <td>9019944884</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="mailto:seenusurya67@gmail.com">
+                        <img src="mail.png" alt="Email">
+                    </a>
+                </td>
+                <td>
+                    <a href="mailto:seenusurya81@gmail.com">seenusurya81@gmail.com</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.instagram.com/surya_kiran.07" target="_blank">
+                        <img src="insta.jpg" alt="Instagram">
+                    </a>
+                </td>
+                <td>
+                    <a href="https://www.instagram.com/surya_kiran.07" target="_blank">@surya_kiran.07</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://github.com/suryaCodeCraft" target="_blank">
+                        <img src="git.png" alt="GitHub">
+                    </a>
+                </td>
+                <td>
+                    <a href="https://github.com/suryaCodeCraft" target="_blank">suryaCodeCraft</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://www.linkedin.com/in/surya-kiran-761426266" target="_blank">
+                        <img src="link.png" alt="LinkedIn">
+                    </a>
+                </td>
+                <td>
+                    <a href="https://www.linkedin.com/in/surya-kiran-761426266" target="_blank">Surya Kiran</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

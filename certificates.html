@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover, .active {
+            background: #4A90E2;
+            border-radius: 5px;
+        }
+        h2, h3 {
+            font-size: 24px;
+            text-decoration: underline;
+        }
+        .certificates {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        .category {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+        .images {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image-container img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-container img:hover {
+            transform: scale(3);
+        }
+        .certificate-name {
+            margin-top: 5px;
+            font-size: 16px;
+        }
+        .full-view {
+            position: fixed;
+            top: 0;
+            left: 100%;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: left 0.5s ease;
+        }
+        .full-view img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="Projects.html">PROJECTS</a></li>
+                <li><a href="certificates.html" class="active">CERTIFICATES</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h2>Certificates</h2>
+    <div class="certificates">
+        <div class="category">
+            <h3>Course Completion Certificates</h3>
+            <div class="images">
+                <div class="image-container">
+                    <img src="python.jpeg" alt="Python" onclick="openFullView(this.src)">
+                    <span class="certificate-name">Python </span>
+                </div>
+                <div class="image-container">
+                    <img src="python (2).jpeg" alt="Basics of Python" onclick="openFullView(this.src)">
+                    <span class="certificate-name">Basics of Python</span>
+                </div>
+                <div class="image-container">
+                    <img src="chefpython.jpeg" alt="python codechef" onclick="openFullView(this.src)">
+                    <span class="certificate-name">Code Chef Python </span>
+                </div>
+                <div class="image-container">
+                    <img src="c.jpeg" alt="Python " onclick="openFullView(this.src)">
+                    <span class="certificate-name">C Language</span>
+                </div>
+                <div class="image-container">
+                    <img src="data analyis.jpeg" alt="Python " onclick="openFullView(this.src)">
+                    <span class="certificate-name">Data Analysis</span>
+                </div>
+                <div class="image-container">
+                    <img src="agile.jpeg" alt="Python " onclick="openFullView(this.src)">
+                    <span class="certificate-name">Software Development using Agile process</span>
+                </div>
+                <div class="image-container">
+                    <img src="html.jpeg" alt="Python " onclick="openFullView(this.src)">
+                    <span class="certificate-name">HTML&CSS</span>
+                </div>
+                <div class="image-container">
+                    <img src="SERVICENOW CERTIFICATE.png" alt="Python " onclick="openFullView(this.src)">
+                    <span class="certificate-name">ServiceNow Micro-Certification</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="category">
+            <h3>Certificates of Appreciation</h3>
+            <div class="images">
+                <div class="image-container">
+                    <img src="nss.jpeg" alt="NSS participation" onclick="openFullView(this.src)">
+                    <span class="certificate-name">NSS participation</span>
+                </div>
+                <div class="image-container">
+                    <img src="exhi.jpeg" alt="Exhibition Appreciation" onclick="openFullView(this.src)">
+                    <span class="certificate-name">Exhibition Appreciation</span>
+                </div>
+                <div class="image-container">
+                    <img src="hackthon.jpeg" alt="hackthon participation" onclick="openFullView(this.src)">
+                    <span class="certificate-name">Hackthon participation</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="full-view" id="fullView">
+        <span class="close-btn" onclick="closeFullView()">&times;</span>
+        <img id="fullImage" src="">
+    </div>
+    
+    <script>
+        function openFullView(src) {
+            document.getElementById("fullImage").src = src;
+            document.getElementById("fullView").style.left = "0";
+        }
+        function closeFullView() {
+            document.getElementById("fullView").style.left = "100%";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surya's Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover, .active {
+            background: #4A90E2;
+            border-radius: 5px;
+        }
+        .skills-section {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .skills-category {
+            width: 100%;
+            position: relative;
+        }
+        .skills-category h2 {
+            margin-left: 20px;
+            border-bottom: solid white;
+            width: 30%;
+            padding-bottom: 5px;
+        }
+        .chart-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px;
+            justify-content: flex-start;
+        }
+        .chart-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* Small Doughnut Chart Size */
+        .chart-box canvas {
+            width: 80px !important;
+            height: 80px !important;
+        }
+        /* Overall Pie Chart Section */
+        .overall-skills {
+    position: absolute;
+    top: 200px; /* Adjust this to move it further down */
+    right: 20px; /* Moves it towards the right */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.overall-skills canvas {
+    width: 350px !important;
+    height: 350px !important;
+}
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="Projects.html">PROJECTS</a></li>
+                <li><a href="certificates.html">CERTIFICATES</a></li>
+                <li><a href="skills.html" class="active">SKILLS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="skills" class="skills-section">
+        <h1>Skills</h1>
+        
+        <div class="skills-category">
+            <h2>Programming Languages</h2>
+            <div class="chart-container">
+                <div class="chart-box"><canvas id="pythonChart"></canvas><p>Python (75%)</p></div>
+                <div class="chart-box"><canvas id="javaChart"></canvas><p>Java (70%)</p></div>
+                <div class="chart-box"><canvas id="javascriptChart"></canvas><p>JavaScript (70%)</p></div>
+                <div class="chart-box"><canvas id="htmlCssChart"></canvas><p>HTML & CSS (80%)</p></div>
+                <div class="chart-box"><canvas id="sqlChart"></canvas><p>DBMS (70%)</p></div>
+            </div>
+        </div>
+        
+        <div class="skills-category">
+            <h2>Tools & Technologies</h2>
+            <div class="chart-container">
+                <div class="chart-box"><canvas id="gitChart"></canvas><p>Git (80%)</p></div>
+                <div class="chart-box"><canvas id="githubChart"></canvas><p>GitHub (80%)</p></div>
+                <div class="chart-box"><canvas id="powerBIChart"></canvas><p>Power BI (90%)</p></div>
+                <div class="chart-box"><canvas id="tableauChart"></canvas><p>Tableau (90%)</p></div>
+            </div>
+        </div>
+        
+        <div class="skills-category">
+            <h2>Machine Learning & Data Science</h2>
+            <div class="chart-container">
+                <div class="chart-box"><canvas id="mlChart"></canvas><p>Machine Learning (40%)</p></div>
+                <div class="chart-box"><canvas id="dataAnalysisChart"></canvas><p>Data Analysis (75%)</p></div>
+            </div>
+        </div>
+
+        <div class="skills-category">
+            <h2>Problem-Solving & Analytical Skills</h2>
+            <div class="chart-container">
+                <div class="chart-box"><canvas id="problemSolvingChart"></canvas><p>Problem-Solving (60%)</p></div>
+            </div>
+        </div>
+
+        <!-- Overall Skills Pie Chart -->
+        <div class="overall-skills">
+            <h2>Overall Skill Distribution</h2>
+            <canvas id="overallSkillsChart"></canvas>
+        </div>
+    </section>
+    
+    <script>
+        function createDoughnutChart(canvasId, percentage) {
+            new Chart(document.getElementById(canvasId), {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [percentage, 100 - percentage],
+                        backgroundColor: ['#007BFF', '#D3D3D3'],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    cutout: '60%',
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { enabled: false }
+                    }
+                }
+            });
+        }
+        
+        // Individual Skills Doughnut Charts
+        createDoughnutChart("pythonChart", 75);
+        createDoughnutChart("javaChart", 70);
+        createDoughnutChart("javascriptChart", 70);
+        createDoughnutChart("htmlCssChart", 80);
+        createDoughnutChart("sqlChart", 70);
+        createDoughnutChart("gitChart", 80);
+        createDoughnutChart("githubChart", 80);
+        createDoughnutChart("powerBIChart", 90);
+        createDoughnutChart("tableauChart", 90);
+        createDoughnutChart("mlChart", 40);
+        createDoughnutChart("dataAnalysisChart", 75);
+        createDoughnutChart("problemSolvingChart", 60);
+
+        // Overall Skills Pie Chart
+        new Chart(document.getElementById("overallSkillsChart"), {
+    type: 'pie',
+    data: {
+        labels: ["Programming", "Tools and Technologies", "Machine Learning & Data Science", "Problem Solving"],
+        datasets: [{
+            data:  [70,90 , 60, 50,], // Fixed mismatch issue (4 labels, 4 data points)
+            backgroundColor: ['#5B9BD5', '#8DC3E9', '#B0D5F1', '#73A8D7'],
+            borderColor: '#000000', // Set border to black
+            borderWidth: 1 // Adjust thickness of the borders
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { 
+                position: 'bottom', 
+                labels: { color: 'white' } 
+            }
+        }
+    }
+});
+    </script>
+
+</body>
+</html>

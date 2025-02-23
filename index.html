@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surya's Portfolio</title>
+   
+    <style>
+        body {
+            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover,.active {
+            background: #4A90E2;
+            border-radius: 5px;
+        }
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 80vh;
+            padding: 20px;
+        }
+        .intro-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 55%;
+            margin-left: 100px;
+        }
+        .profile-image img {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            border: 5px solid white;
+        }
+        .intro h1 {
+            font-size: 2.5rem;
+        }
+        .intro h2 {
+            font-size: 1.8rem;
+            margin-top: 20px;
+        }
+        .intro h3 {
+            font-size: 1.4rem;
+            margin-top: 10px;
+            white-space: pre-line;
+        }
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-image img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let elements = [
+                { selector: ".intro h1", text: "Hi! I'm Surya Kiran K V" },
+                { selector: ".intro h2", text: "~Engineering student at DSATM" },
+                { selector: ".intro h3", text: "I'm Surya, STUDENT who loves analyzing problems from different angles and exploring multiple solutions.\nI’m naturally reserved, but once I connect with Environment, I open up easily.\nI tend to think deeply about things, often considering different possibilities before making a decision—some might, I see it as thorough problem-solving.\nThis mindset helps me approach challenges with curiosity and a desire to improve things in unique ways." }
+            ];
+
+            function typeWriter(element, text, i = 0, callback) {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    setTimeout(() => typeWriter(element, text, i + 1, callback), 50);
+                } else if (callback) {
+                    setTimeout(callback, 500);
+                }
+            }
+
+            function startTyping(index = 0) {
+                if (index < elements.length) {
+                    let el = document.querySelector(elements[index].selector);
+                    el.innerHTML = "";
+                    typeWriter(el, elements[index].text, 0, () => startTyping(index + 1));
+                }
+            }
+
+            startTyping();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="education.html">EDUCATION</a></li>
+                <li><a href="Projects.html">PROJECTS</a></li>
+                <li><a href="certificates.html">CERTIFICATES</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero-section">
+        <div class="intro-container">
+            <div class="intro">
+                <h1></h1>
+                <h2></h2>
+                <h3></h3>
+            </div>
+        </div>
+        <div class="profile-image">
+            <img src="surya photo.JPG" alt="Surya's Profile">
+        </div>
+    </section>
+</body>
+</html>
