@@ -39,8 +39,16 @@
             border-radius: 5px;
         }
         .container {
-            max-width: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            max-width: 900px;
             margin: 50px auto;
+            padding: 20px;
+        }
+        .box {
+            width: 45%;
             padding: 20px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
@@ -55,9 +63,9 @@
             margin-top: 20px;
         }
         .info-table td, .contact-table td {
-            padding: 15px;
+            padding: 10px;
             border-bottom: 1px solid white;
-            text-align: center;
+            text-align: left;
         }
         .contact-table a {
             text-decoration: none;
@@ -72,13 +80,13 @@
             color: #4A90E2;
         }
         .contact-table img {
-            width: 50px;
-            height: 50px;
-            transition: transform 0.3s, filter 0.3s;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
         }
-        .contact-table img:hover {
-            transform: scale(1.2);
-            filter: brightness(1.2);
+        .contact-table td {
+            display: flex;
+            align-items: center;
         }
     </style>
 </head>
@@ -96,69 +104,59 @@
         </nav>
     </header>
 
+    <h1>Contact</h1>
+
     <div class="container">
-        <h1>Contact</h1>
+        <!-- Personal Info -->
+        <div class="box">
+            <h2>Personal Details</h2>
+            <table class="info-table">
+                <tr><td><strong>Name:</strong> Surya Kiran K V</td></tr>
+                <tr><td><strong>Date of Birth:</strong> 11/02/2005</td></tr>
+                <tr><td><strong>Age:</strong> 20</td></tr>
+                <tr><td><strong>Graduation Year:</strong> 2026</td></tr>
+                <tr><td><strong>Branch:</strong> Information Science and Engineering</td></tr>
+                <tr><td><strong>College:</strong> Dayananda Sagar Academy of Technology and Management</td></tr>
+                <tr><td><strong>Current Semester:</strong> 6th</td></tr>
+            </table>
+        </div>
 
-        <table class="info-table">
-            <tr><td><strong>Name:</strong> Surya Kiran K V</td></tr>
-            <tr><td><strong>Date of Birth:</strong> 11/02/2005</td></tr>
-            <tr><td><strong>Age:</strong> 20</td></tr>
-            <tr><td><strong>Graduation Year:</strong> 2026</td></tr>
-            <tr><td><strong>Branch:</strong> Information Science and Engineering</td></tr>
-            <tr><td><strong>College:</strong> Dayananda Sagar Academy of Technology and Management</td></tr>
-            <tr><td><strong>Current Semester:</strong> 6th</td></tr>
-        </table>
-
-        <table class="contact-table">
-            <tr>
-                <td>
-                    <a href="tel:9019944884">
+        <!-- Contact Info -->
+        <div class="box">
+            <h2>Contact Details</h2>
+            <table class="contact-table">
+                <tr>
+                    <td>
                         <img src="whatsapp.png" alt="Phone">
-                    </a>
-                </td>
-                <td>9019944884</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="mailto:seenusurya67@gmail.com">
+                        <a href="tel:9019944884">9019944884</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <img src="mail.png" alt="Email">
-                    </a>
-                </td>
-                <td>
-                    <a href="mailto:seenusurya81@gmail.com">seenusurya81@gmail.com</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://www.instagram.com/surya_kiran.07" target="_blank">
+                        <a href="mailto:seenusurya81@gmail.com">seenusurya81@gmail.com</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <img src="insta.jpg" alt="Instagram">
-                    </a>
-                </td>
-                <td>
-                    <a href="https://www.instagram.com/surya_kiran.07" target="_blank">@surya_kiran.07</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://github.com/suryaCodeCraft" target="_blank">
+                        <a href="https://www.instagram.com/surya_kiran.07" target="_blank">@surya_kiran.07</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <img src="git.png" alt="GitHub">
-                    </a>
-                </td>
-                <td>
-                    <a href="https://github.com/suryaCodeCraft" target="_blank">suryaCodeCraft</a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://www.linkedin.com/in/surya-kiran-761426266" target="_blank">
+                        <a href="https://github.com/suryaCodeCraft" target="_blank">suryaCodeCraft</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <img src="link.png" alt="LinkedIn">
-                    </a>
-                </td>
-                <td>
-                    <a href="https://www.linkedin.com/in/surya-kiran-761426266" target="_blank">Surya Kiran</a>
-                </td>
-            </tr>
-        </table>
+                        <a href="https://www.linkedin.com/in/surya-kiran-761426266" target="_blank">Surya Kiran</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
 </html>
