@@ -81,10 +81,11 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
           let elements = [
-                { selector: ".intro h1", text: "Hi! I'm Surya Kiran K V" },
-                { selector: ".intro h2", text: "~Engineering student at DSATM" },
-                { selector: ".intro h3", text: "I'm Surya, STUDENT who loves analyzing problems from different angles and exploring multiple solutions.\nI’m naturally reserved, but once I connect with Environment, I open up easily.\nI tend to think deeply about things, often considering different possibilities before making a decision—some might, I see it as thorough problem-solving.\nThis mindset helps me approach challenges with curiosity and a desire to improve things in unique ways." }
-            ];
+    { selector: ".intro h1", text: "Hi! I'm Surya Kiran K V" },
+    { selector: ".intro h2", text: "~ Engineering Student at DSATM" },
+    { selector: ".intro h3", text: "I am an engineering student at DSATM, committed to exploring innovative solutions and applying my academic knowledge to real-world challenges. I approach my academic work with a deep sense of curiosity, always striving to learn more and push the boundaries of my understanding.\n\nThough naturally reserved, I thrive in environments that encourage creativity and collaboration. I enjoy approaching academic challenges with a mindset focused on continuous improvement and a desire to make a meaningful impact.\n\nI’m passionate about learning and improving, both academically and personally, and I am always eager to engage in opportunities that challenge me and expand my skill set." }
+];
+
             function typeWriter(element, text, i = 0, callback) {
                 if (i < text.length) {
                     element.innerHTML += text.charAt(i);
