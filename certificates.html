@@ -9,8 +9,8 @@
             font-family: Arial, sans-serif;
             background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
             color: white;
-            margin: 0;
             text-align: center;
+            margin: 0;
         }
 
         header {
@@ -25,7 +25,6 @@
             display: flex;
             gap: 20px;
             padding: 0;
-            margin: 0;
         }
 
         nav ul li a {
@@ -35,8 +34,7 @@
             transition: 0.3s;
         }
 
-        nav ul li a:hover,
-        .active {
+        nav ul li a:hover, .active {
             background: #4A90E2;
             border-radius: 5px;
         }
@@ -44,51 +42,47 @@
         h2, h3 {
             font-size: 24px;
             text-decoration: underline;
-            margin-top: 20px;
         }
 
         .certificates {
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
         }
 
         .category {
-            margin-bottom: 40px;
+            width: 80%;
+            margin-bottom: 30px;
         }
 
         .images {
             display: flex;
+            gap: 15px;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
         }
 
         .image-container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 200px;
-            padding: 10px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
         }
 
         .image-container img {
-            width: 100%;
+            width: 200px;
             height: auto;
             cursor: pointer;
             transition: transform 0.3s ease-in-out;
-            border-radius: 8px;
         }
 
         .image-container img:hover {
-            transform: scale(2.5);
-            z-index: 10;
+            transform: scale(3);
         }
 
         .certificate-name {
-            margin-top: 8px;
-            font-size: 14px;
+            margin-top: 5px;
+            font-size: 16px;
         }
 
         .full-view {
@@ -102,7 +96,6 @@
             justify-content: center;
             align-items: center;
             transition: left 0.5s ease;
-            z-index: 999;
         }
 
         .full-view img {
@@ -121,6 +114,7 @@
     </style>
 </head>
 <body>
+
     <header>
         <nav>
             <ul>
@@ -142,16 +136,46 @@
         <div class="category">
             <h3>Course Completion Certificates</h3>
             <div class="images">
-                <div class="image-container"><img src="python.jpeg" alt="Python" onclick="openFullView(this.src)"><span class="certificate-name">Python</span></div>
-                <div class="image-container"><img src="python (2).jpeg" alt="Basics of Python" onclick="openFullView(this.src)"><span class="certificate-name">Basics of Python</span></div>
-                <div class="image-container"><img src="chefpython.jpeg" alt="CodeChef Python" onclick="openFullView(this.src)"><span class="certificate-name">CodeChef Python</span></div>
-                <div class="image-container"><img src="c.jpeg" alt="C Language" onclick="openFullView(this.src)"><span class="certificate-name">C Language</span></div>
-                <div class="image-container"><img src="data analyis.jpeg" alt="Data Analysis" onclick="openFullView(this.src)"><span class="certificate-name">Data Analysis</span></div>
-                <div class="image-container"><img src="agile.jpeg" alt="Agile Process" onclick="openFullView(this.src)"><span class="certificate-name">Agile Process</span></div>
-                <div class="image-container"><img src="html.jpeg" alt="HTML & CSS" onclick="openFullView(this.src)"><span class="certificate-name">HTML & CSS</span></div>
-                <div class="image-container"><img src="SERVICENOW CERTIFICATE.png" alt="ServiceNow Micro" onclick="openFullView(this.src)"><span class="certificate-name">ServiceNow Micro-Certification</span></div>
-                <div class="image-container"><img src="Screenshot 2025-03-31 222655.png" alt="CSA" onclick="openFullView(this.src)"><span class="certificate-name">CSA – ServiceNow</span></div>
-                <div class="image-container"><img src="udemy.jpg" alt="Intro to Data Science" onclick="openFullView(this.src)"><span class="certificate-name">Intro to Data Science</span></div>
+                <div class="image-container">
+                    <img src="python.jpeg" alt="Python" onclick="openFullView(this.src)">
+                    <span class="certificate-name">Python</span>
+                </div>
+                <div class="image-container">
+                    <img src="python (2).jpeg" alt="Basics of Python" onclick="openFullView(this.src)">
+                    <span class="certificate-name">Basics of Python</span>
+                </div>
+                <div class="image-container">
+                    <img src="chefpython.jpeg" alt="CodeChef Python" onclick="openFullView(this.src)">
+                    <span class="certificate-name">CodeChef Python</span>
+                </div>
+                <div class="image-container">
+                    <img src="c.jpeg" alt="C Language" onclick="openFullView(this.src)">
+                    <span class="certificate-name">C Language</span>
+                </div>
+                <div class="image-container">
+                    <img src="data analyis.jpeg" alt="Data Analysis" onclick="openFullView(this.src)">
+                    <span class="certificate-name">Data Analysis</span>
+                </div>
+                <div class="image-container">
+                    <img src="agile.jpeg" alt="Agile Development" onclick="openFullView(this.src)">
+                    <span class="certificate-name">Agile Process</span>
+                </div>
+                <div class="image-container">
+                    <img src="html.jpeg" alt="HTML & CSS" onclick="openFullView(this.src)">
+                    <span class="certificate-name">HTML & CSS</span>
+                </div>
+                <div class="image-container">
+                    <img src="SERVICENOW CERTIFICATE.png" alt="ServiceNow Micro-Cert" onclick="openFullView(this.src)">
+                    <span class="certificate-name">ServiceNow Micro-Certification</span>
+                </div>
+                <div class="image-container">
+                    <img src="Screenshot 2025-03-31 222655.png" alt="CSA Certificate" onclick="openFullView(this.src)">
+                    <span class="certificate-name">Certified System Administrator (CSA)</span>
+                </div>
+                <div class="image-container">
+                    <img src="udemy.jpg" alt="Data Science" onclick="openFullView(this.src)">
+                    <span class="certificate-name">Intro to Data Science</span>
+                </div>
             </div>
         </div>
 
@@ -159,16 +183,27 @@
         <div class="category">
             <h3>Certificates of Appreciation and Participation</h3>
             <div class="images">
-             <div class="image-container"><img src="exhi.jpeg" alt="Exhibition" onclick="openFullView(this.src)"><span class="certificate-name">Exhibition Appreciation</span></div
-                <div class="image-container"><img src="nss.jpeg" alt="NSS" onclick="openFullView(this.src)"><span class="certificate-name">NSS Participation</span></div>
-                <div class="image-container"><img src="hackthon.jpeg" alt="Hackathon" onclick="openFullView(this.src)"><span class="certificate-name">Hackathon Participation</span></div>
-                <div class="image-container"><img src="Hackthon certificate.jpg" alt="Hackathon" onclick="openFullView(this.src)"><span class="certificate-name">Hackathon Participation</span></div>
+                <div class="image-container">
+                    <img src="exhi.jpeg" alt="Exhibition" onclick="openFullView(this.src)">
+                    <span class="certificate-name">Exhibition Appreciation</span>
+                </div>
+                <div class="image-container">
+                    <img src="nss.jpeg" alt="NSS Participation" onclick="openFullView(this.src)">
+                    <span class="certificate-name">NSS Participation</span>
+                </div>
+                <div class="image-container">
+                    <img src="hackthon.jpeg" alt="Hackathon" onclick="openFullView(this.src)">
+                    <span class="certificate-name">Hackathon Participation</span>
+                </div>
+                <div class="image-container">
+                    <img src="Hackthon certificate.jpg" alt="Hackathon" onclick="openFullView(this.src)">
+                    <span class="certificate-name">Hackathon Participation</span>
+                </div>
             </div>
         </div>
 
     </div>
 
-    <!-- Full View Modal -->
     <div class="full-view" id="fullView">
         <span class="close-btn" onclick="closeFullView()">&times;</span>
         <img id="fullImage" src="">
@@ -184,5 +219,6 @@
             document.getElementById("fullView").style.left = "100%";
         }
     </script>
+    
 </body>
 </html>
